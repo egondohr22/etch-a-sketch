@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    
+}
+h1 {
+    margin: auto
+}
+
+#page {
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+}
+
+#page > div {
+    margin: auto;
+}
