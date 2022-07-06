@@ -1,15 +1,15 @@
-console.log('hi')
-const container = document.querySelector("#page div")
+const grid = document.querySelector("#page div")
 
-let size = 16;
-const div = document.createElement('div');
-        div.innerText = "test";
-        div.style.width = 256/size;
-        div.style.height = 256/size;
-        
-for(let i = 0; i < size; i++) {
-    for(let j = 0; j < size; j++) {
-        container.appendChild(div);
-        console.log('hi')
+function setGrid(size) {
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    for(let i = 0; i < size*size; i++) {
+        const gridDiv = document.createElement('div');
+        gridDiv.textContent = 'D';
+        gridDiv.classList.add('grid-element')
+        grid.appendChild(gridDiv);
     }
 }
+
+setGrid(16);
