@@ -21,4 +21,20 @@ h1 {
 
 #page > div {
     margin: auto;
+    display: grid;
+    max-width: 800px;
+    max-height: 800px;
+    height: 80%;
+    width: 80%;
+}
+
+.grid-element {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.lborder {
+    border-left: 1px solid black;
+}
+.uborder {
+    border-top: 1px solid black;
 }
