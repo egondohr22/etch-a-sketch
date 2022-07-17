@@ -1,5 +1,12 @@
-const grid = document.querySelector("#page div")
-let ok = 0
+const grid = document.querySelector("#grid");
+const clear = document.querySelector('#clearBtn');
+
+clear.onclick = () => {
+    grid.innerHTML = '';
+    setGrid(60);
+};
+
+let ok = 0;
 function setGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -27,12 +34,12 @@ function setGrid(size) {
 
 function changeColor(e) { 
     
-    if(e.type == 'mousedown') ok = 1
-    if(e.type == 'mouseover' && !ok) return
-    const R = Math.floor(Math.random() * 256)
-    const G = Math.floor(Math.random() * 256)
-    const B = Math.floor(Math.random() * 256)
-    e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`
+    if(e.type == 'mousedown') ok = 1;
+    if(e.type == 'mouseover' && !ok) return;
+    const R = Math.floor(Math.random() * 256);
+    const G = Math.floor(Math.random() * 256);
+    const B = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
 }
 
-setGrid(16);
+setGrid(60);
